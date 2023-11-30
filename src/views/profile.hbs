@@ -1,0 +1,23 @@
+<style>
+    footer {
+        position: fixed;
+    }
+</style>
+<div class="container profile-main-container">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center ">
+                <div class="card-body profile-container">
+                    <h3>Bienvenido {{user.nombre}}</h3>
+                    <h4>{{user.email}}</h4>
+                    <button class="btn" onclick="window.location.href='/Productos/add'">Agrega un producto o servicio <i class="fa-solid fa-boxes-packing"></i></button>
+                    <button class="btn" onclick="window.location.href='/Productos'">Administrar productos <i class="fa-solid fa-box-open"></i></button>
+                    <button class="btn" onclick="window.location.href='/Productos/services'">Administrar servicios <i class="fa-solid fa-people-carry-box"></i></button>
+                    <button class="btn" onclick="window.location.href='/Productos/admipagos'">Administrar Pagos <i class="fa-solid fa-sack-dollar"></i></button>
+                    <button class="btn" onclick="window.location.href='/Productos/pagosconf'">Pedidos Pagados <i class="fa-solid fa-vault text-start"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

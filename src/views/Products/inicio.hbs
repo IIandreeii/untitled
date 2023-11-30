@@ -1,0 +1,41 @@
+<div id="main-container" class="container">
+    <div id="contenedor-productos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        {{#each inicio}}
+        <div>
+            <div class="card">
+                <img src="{{img}}">
+                <div class="card-body">
+                    <h3>{{Nombre}}</h3>
+                    <p class="card-text">S/. {{precio}}</p>
+                </div>
+                {{!-- <a href="/Productos/productoview/{{id}}" class="btn btn-sm btn-outline-secondary">Ver Producto</a>
+                --}}
+                <button onclick="window.location.href='/Productos/productoview/{{id}}'"
+                    class="btn btn-sm btn-outline-secondary">Ver Producto</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="pagination pagination justify-content-center">
+            {{#if (gt totalPages 1)}}
+            {{#if (ne currentPage 1)}}
+            <li class="page-item"><a class="page-link" href="/Productos/inicio?page=1">Primera</a></li>
+            {{/if}}
+            {{#if (gt currentPage 1)}}
+            <li class="page-item"><a class="page-link" href="/Productos/inicio?page={{sub currentPage 1}}"><i class="fa-solid fa-chevron-left"></i> Anterior</a>
+            </li>
+            {{/if}}
+            {{#if (lt currentPage totalPages)}}
+            <li class="page-item"><a class="page-link" href="/Productos/inicio?page={{add currentPage 1}}">Siguiente <i class="fa-solid fa-chevron-right"></i></a>
+            </li>
+            {{/if}}
+            {{#if (ne currentPage totalPages)}}
+            <li class="page-item"><a class="page-link" href="/Productos/inicio?page={{totalPages}}">Última</a></li>
+            {{/if}}
+            {{/if}}
+        </ul>
+    </div>
+</div>

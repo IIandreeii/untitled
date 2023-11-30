@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{#each pedidos}}
+            <div >
+                <h4>Compras de: {{this.usuario}}</h4>
+            </div>
+            <table class="table table-bordered"> 
+                <thead>
+                    <tr>
+                        <th class="text-left">DNI</th>
+                        <th class="text-left">Producto</th>
+                        <th class="text-left">Cantidad</th>
+                        <th class="text-left">Precio</th>
+                        <th class="text-left">Sub total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each this.pedidos}}
+                    <tr class="t-tr-pay">
+                        <td class="align-middle">{{DNI}}</td>
+                        <td class="aling-middle">{{NombreProducto}}</td>
+                        <td class="align-middle">{{quantity}}</td>
+                        <td class="align-middle">S/.{{precio}}</td>
+                        <td class="align-middle">{{formatCurrency subtotal}}</td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <td colspan="3"></td>
+                        <td><strong>Total</strong></td>
+                        <td colspan="2"><strong>{{formatCurrency this.subtotal}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            {{/each}}
+        </div>
+    </div>
+</div>

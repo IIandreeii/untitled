@@ -1,0 +1,49 @@
+<header>
+    <div class="nav-container">
+
+        <h2 class="brand">Funeraria Anderson</h2>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse" data-bs-target="#BarraNavegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="BarraNavegacion" class="collapse navbar-collapse justify-content-center text-center">
+                    <ul class="navbar-nav ms-3">
+                        {{#if user}}
+                        <li class="nav-item"><a class="nav-link" href="/Productos/inicio">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/servicess">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/about">Quienes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/uscarrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cuenta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                                <li><a class="dropdown-item" href="/logout"></i> Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                        {{!-- <li class="nav-item"><a class="nav-link" href="/profile"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li> --}}
+                        {{else}}
+                        <li class="nav-item"><a class="nav-link" href="/Productos/inicio">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/servicess">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/about">Quienes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Productos/contact">Contacto</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cuenta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="/signin">Inicia sesión</a></li>
+                                <li><a class="dropdown-item" href="/signup">Registrate</a></li>
+                            </ul>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

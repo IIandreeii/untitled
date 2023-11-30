@@ -1,0 +1,106 @@
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <div class="t-title">
+                <h3>Gestion de Pagos</h3>
+            </div>
+            
+                
+                <table id="table-payments" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-left">Nombre</th>
+                            <th class="text-left">Productos</th>
+                            <th class="text-left">Cantidad</th>
+                            <th class="text-left">Precio</th>
+                            <th class="text-left">Sub total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each pedidos}}
+                        <form method="POST" action="/Productos/ConfirmaciondePago"></form>
+                            {{#each this.pedidos}}
+                            <tr>
+                                <td class="align-middle">{{NombreUsuario}} {{Apellido}}</td>
+                                <td class="aling-middle">{{NombreProducto}}</td>
+                                <td class="align-middle">{{quantity}}</td>
+                                <td class="align-middle"><{{precio}}></td>
+                                <td class="align-middle">{{formatCurrency subtotal}}</td>
+                                {{/each}}
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td><strong>Total</strong></td>
+                                    <td><strong>{{formatCurrency this.subtotal}}</strong>lll</button></td>
+                                    <td class="text-end">
+                                        <button type="submit" class="btn btn-primary">Confirmar Pago</button>
+                                    </td>
+                                </tr>
+                                
+                                
+                                <input type="hidden" name="productid" value="{{idProducto}}">
+                                <input type="hidden" name="cantidad" value="{{quantity}}">
+                                <input type="hidden" name="idcarrito" value="{{idcarrito}}">
+                            </tr>
+                        </form>
+                        {{/each}}
+                       
+                    </tbody>
+                </table>
+                
+            
+            
+        </div>
+    </div>
+</div> --}}
+
+
+<style>
+    footer {
+        position: fixed;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{#each pedidos}}
+            <div>
+                <h4>Pedido de: {{this.usuario}}</h4>
+            </div>
+            <form method="POST" action="/Productos/ConfirmaciondePago">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-left">DNI</th>
+                            <th class="text-left">Producto</th>
+                            <th class="text-left">Cantidad</th>
+                            <th class="text-left">Precio</th>
+                            <th class="text-left">Sub total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each this.pedidos}}
+                        <tr class="t-tr-pay">
+                            <td class="align-middle">{{DNI}}</td>
+                            <td class="aling-middle">{{NombreProducto}} </td>
+                            <td class="align-middle">{{quantity}}</td>
+                            <td class="align-middle">S/.{{precio}} </td>
+                            <td class="align-middle">{{formatCurrency subtotal}}</td>
+                            <input type="hidden" name="productid" value="{{idProducto}}">
+                            <input type="hidden" name="cantidad" value="{{quantity}}">
+                            <input type="hidden" name="idcarrito" value="{{idcarrito}}">
+                        </tr>
+                        {{/each}}
+                        <tr>
+                            <td colspan="3"><button type="submit" class="btn btn-succsess"><i class="fa-solid fa-circle-check"></i> Confirmar</button></td>
+                            <td><strong>Total</strong></td>
+                            <td><strong>{{formatCurrency this.subtotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            {{/each}}
+        </div>
+    </div>
+</div>

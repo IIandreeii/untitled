@@ -1,0 +1,86 @@
+<style>
+    footer {
+        position: fixed;
+    }
+</style>
+        <div>
+            <a href="#modal"  class="btn-open-popup aling-middle "> <i> <img src="/img/logoyape.png" ></i></a>
+        </div>
+        <br>
+        <div class="container-all" id="modal">
+            <div class="popup">
+                <div class="poup-img"></div>
+                <a href="#" class="btn-close-popup">X</a>
+            </div>
+        </div>
+        <br>
+<main class="container main-car" >
+    <form action="/Productos/actualizarcarrito" method="POST">
+        
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th class="text-left">Imagen</th>
+                    <th class="text-left">Nombre</th>
+                    <th class="text-left">Eliminar</th>
+                    <th class="text-left">Cantidad</th>
+                    <th class="text-left">S/.Precio </th>
+                    <th class="text-left">S/.Subtotal</th>
+
+                </tr>
+            </thead>
+            {{#each productos}}
+            <tbody>
+                <tr>
+                    <td class="table-image">
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid img-thumbnail" src="{{img}}" alt="">
+                        </div>
+                    </td>
+                    <td class="align-middle">{{Nombre}}</td>
+                    <td class="align-middle">
+                        <a href="/Productos/carritodelete/{{idcarrito}}" class="btn"
+                            onclick="return confirm('¿Estás seguro de eliminar este producto de tu carrito?')"><i class="fa-solid fa-xmark"></i></a>
+                    </td>
+                    <td class="align-middle">
+                        <input type="number" placeholder="1" min="1" max="5" name="quantity" value="{{quantity}}">
+                        <input type="hidden" name="id" value="{{idcarrito}}">
+                    </td>
+                    <td class="align-middle">S/.{{precio}} </td>
+                    <td class="align-middle">S/.{{totalProducto}}</td>
+
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+        <div class="col text-end">
+            <div class="total">
+                Total del Carrito: S/. {{totalCarrito}} 
+            </div>
+            <button type="submit" class="btn btn-updt">Actualizar</button>
+        </div>
+    </form>
+    <br>
+
+    <form action="/Productos/pagos" method="POST">
+        {{#each productos}}
+        <input type="hidden" name="idcarrito" value="{{idcarrito}}">
+        <input type="hidden" name="subtotal" value="{{totalProducto}}">
+        {{/each}}
+        <div class="col text-end">
+        <button type="submit" class="btn">Pagar</button>
+        
+        </div>
+    </form>
+
+
+    <div class="info-pay">
+        <h3>¿Como pagar?</h3>
+        <p>Pasos para relizar el pago de su pedido:  <br>
+            1. Pulse el boton con el de yape que se encuentra en la parte superior del carrto, lurgo de relizar el pago. <br>
+            2. Enviar una captura al siguite numero de whatsapp: +51 961809498  <br>
+            3. Pulse el boton pagar  <br>
+            4. Espere la confirmación de pago en su Whatsapp</p>
+    </div>
+</main>

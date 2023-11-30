@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="coll-md-5 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/Productos/edit/{{productos.id}}" method="POST" enctype="multipart/form-data" id="editProductForm">
+                        <div class="mb-3">
+                            <input type="text" value="{{productos.Nombre}}" name="nombre" class="form-control" placeholder="Nombre del Producto" required="required" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" value="{{productos.stock}}"  name="stock" class="form-control" placeholder="Cantidad del producto en Stock" required="required" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="descripcion" rows="2" class="form-control" required="required" placeholder="Descripcion del Producto">{{productos.descripcion}}</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" value={{productos.precio}}  name="precio" required="required" class="form-control" placeholder="Precio del Producto" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" name="url" class="form-control"  placeholder="suba su img del Producto">
+                        </div>
+                        <div class="d-grip gap-2">
+                            <button class="btn btn-success btn-block">
+                                save
+                            </button>
+                        </div>
+                    </form>
+                    <div class="container p-4">
+                        <div class="row">
+                            <label>
+                                Al actualizar un producto obligatoriamente tendra que actualizar la imagen puede ser la misma imagen
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

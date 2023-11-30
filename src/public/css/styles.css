@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Lora&display=swap');
+
+header{
+    background-color: #1F2236;
+    color: #D8BD66;
+    font-family: 'Lora', serif;
+}
+header img{
+    float: left;
+    padding: 15px 15px;
+}
+
+main{
+    margin-bottom: 3.125rem;
+    margin-top: 3.125rem;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1F2236;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 10px; 
+}
+
+
+.navbar-nav .nav-link {
+    color: #F2F2F2;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #D8BD66;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active {
+    color: #D8BD66;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(216,189,102, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(216, 189, 102);
+}
+
+.custom-toggler.navbar-toggler:active {
+    outline: none;
+}
+
+footer{
+    font-family: 'Lora', serif;
+    background-color: #1F2236;
+    color: #F2F2F2;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+/* <<<<<<<<< Productos - Servicios >>>>>>>>>> */
+.card{
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.20);
+    margin-bottom: 0.5rem;
+    
+}
+
+.card img{
+    padding: 30px 0;
+    width: 100%;
+    height: 300px;
+    /* adapta la imagen */
+    object-fit: cover;
+    
+}
+
+#main-container{
+    font-family: 'DM Sans', sans-serif;
+    
+}
+
+#main-container .card{
+    border: none;
+}
+
+#main-container button{
+    background-color: #1F2236;
+    color: #F2F2F2;
+    border-style: none;
+    border-radius: 0%;
+
+}
+
+#main-container button:hover{
+    background-color: #D8BD66;
+}
+
+/* <<<<<<<<<<<   LogIn & SignUp   >>>>>>>>>>> */ 
+
+#main-div{
+    
+    color: #ffff;
+    font-family: 'Lora', serif;
+
+}
+
+#logsign{
+    text-align: center;
+    padding: 0%;
+    border-left: 3px solid #ffff;
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 45px; 
+    padding-bottom: 45px;
+}
+
+.logo-name{
+    text-align: center;
+}
+
+.logo-name h2{
+    font-size: 40px;
+}
+
+.btn-l{
+    
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 100;
+    border: 0;
+    color: #F2F2F2;
+    border-radius: 5px;
+    background-color: #D8BD66;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 60px;
+
+}
+
+.logsign-form input{
+    width: 70%;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: transparent;
+    border-color: white;
+    margin-bottom: 20px;
+    color: white;
+    height: 60px;
+}
+
+.logsign-form input:focus{
+    outline-color: #6dabec;
+}
+
+.logsign-form ::placeholder{
+    color: #A6A8A6;
+}
+
+
+.btn-l:hover{
+    background-color: #1F2236;
+}
+
+.logsign-form input:focus{
+    outline-color: #6dabec;
+}
+
+.logsign-form ::placeholder{
+    color: #A6A8A6;
+}
+
+
+.btn-l:hover{
+    background-color: #1F2236;
+}
+
+/* <<<<<<<<<<<       Tablas       >>>>>>>>>>> */ 
+.t-container{
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 1.25rem;
+}
+
+.t-container thead{
+    color: #ffff;
+    background-color:  #1F2236;
+}
+
+/* ========== tbody ========== */
+
+.t-tr:hover {
+    background-color:  #ECF1FF;
+}
+
+.t-tr a{
+    border-color: #1F2236;
+}
+
+.t-tr a:hover{
+    background-color: #1F2236;
+    color: #ffff;
+}
+
+.t-tr button{
+    border-color: #1A1F26;
+}
+
+.t-tr button:hover {
+    background-color: #1A1F26;
+    color: #ffff;
+}
+
+.t-tr-pay td:nth-child(1) {
+    width: 80px;
+}
+
+.t-tr-pay td:nth-child(2) {
+    width: 150px;
+}
+
+.t-tr-pay td:nth-child(3) {
+    width: 80px;
+}
+
+.t-tr-pay td:nth-child(4) {
+    width: 100px;
+}
+
+.t-tr-pay td:nth-child(5) {
+    width: 120px;
+}
+/* ======== tbody end ======== */
+
+.t-title h3{
+    text-align: center;
+    color: #ffff;
+    background-color:  #1F2236;
+}
+/* <<<<<<<<<<<  Carrito - Tablas  >>>>>>>>>>> */ 
+
+.table-image {
+    display: flex;
+    align-items: center;
+} 
+
+.table-image img{
+    max-width: 150px;
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.20);
+}
+
+.td-limit{
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.main-car{
+    padding-bottom: 5rem;
+}
+
+.main-car button{
+    color: white;
+    background-color: #1F2236;
+}
+
+.main-car button{
+    color: white;
+    background-color: #1F2236;
+    border-radius: 0%;
+}
+
+.main-car button:hover{
+    color: white;
+    background-color: #D8BD66;
+    border-radius: 0%;
+}
+
+
+
+#view-container{
+    margin-top: 1rem;
+}
+
+#view-container button{
+    background-color: #1F2236;
+    color: #F2F2F2;
+    border-style: none;
+    border-radius: 0%;
+}
+
+#view-container button:hover{
+    background-color: #D8BD66;
+}
+
+/* <<<<<<<<<<<  Sobre Nosotros    >>>>>>>>>>> */ 
+#info-main-container{
+    padding-top: 2rem;
+}
+#info-container{
+    padding-bottom: 2rem;
+}
+
+#infoc{
+    background-image: url(/img/aboutus1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F2F2F2;
+    margin: auto;
+}
+#infod{
+    background-image: url(/img/aboutus2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F2F2F2;
+    margin: auto;
+}
+
+#infoh{
+    background-image: url(/img/aboutus4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F2F2F2;
+    margin: auto;
+}
+
+#infoc div{
+    font-family: 'Lora', serif;
+    background-color: rgba(166, 166, 166, 0.5);
+    mix-blend-mode: hardlight;
+}
+
+#infod div{
+    font-family: 'Lora', serif;
+    background-color: rgba(166, 166, 166, 0.5);
+    mix-blend-mode: hardlight;
+}
+
+#infoh div{
+    font-family: 'Lora', serif;
+    background-color: rgba(166, 166, 166, 0.5);
+    mix-blend-mode: hardlight;
+}
+
+#infoc h4{
+    padding: 10px;
+}
+#infod h4{
+    padding: 10px;
+}
+
+#infoh h4{
+    padding: 10px;
+}
+
+#infoc p{
+    padding: 10px;
+}
+#infod p{
+    padding: 10px;
+}
+
+#infoh p{
+    padding: 10px;
+}
+
+.info-us{
+    border-style: ridge;
+}
+
+
+/* <<<<<<<<<<<      Contacto      >>>>>>>>>>> */ 
+
+#contact button{
+    background-color: #F4F0E9;
+    color: #4C4C4C;
+    border-style: none;
+    border-radius: 0%;
+}
+
+#contact button:hover{
+    background-color:#1A1F26 ;
+    color: #F2F2F2;
+
+}
+
+#contact h4 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    color: #D8BD66;
+}
+
+.btn-close-popup{
+    margin-top: 2rem;
+}
+.profile-main-container{
+    
+    margin-top: 2rem;
+}
+.profile-container button{
+    width: 280px;
+    height: 40px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-color: #1F2236;
+    color: #1F2236;
+    background-color: white;
+    align-items: flex-start;
+}
+.profile-container button i{
+    align-items: flex-end;
+}   
+
+.profile-container button:hover{
+
+    color: white;
+    background-color: #1F2236;
+}
+
+/* <<<<<<<<<<<      PopUP      >>>>>>>>>>> */ 
+.btn-open-popup {
+    position: absolute;
+    justify-content: center;
+    padding: 20px 50px;
+
+}
+.btn-open-popup img{
+    height: 65px;
+    width: 65px;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+    margin-left: 4.5rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.20);
+}
+
+.container-all{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.container-all:target {
+    background:rgba(0,0,0,0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .popup{
+    top:50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.popup {
+    width: 30%;
+    max-width: 800;
+    height: 600px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -40%;
+    left: -40%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+.poup-img{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/qr.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btn-close-popup {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+
+.map{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}

@@ -1,0 +1,18 @@
+
+<div id="main-container" class="container">
+    <div id="contenedor-productos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        {{#each services}}
+        <div>
+            <div class="card">
+            <img src="{{img}}">
+            <div class="card-body">
+                <h3>{{Nombre}}</h3>
+                <p class="card-text">S/. {{precio}}</p>
+            </div>
+            {{!-- <a href="/Productos/productoview/{{id}}" class="btn btn-sm btn-outline-secondary">Ver Producto</a> --}}
+            <button onclick="window.location.href='/Productos/productoview/{{id}}'" class="btn btn-sm btn-outline-secondary">Ver Servicio</button>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

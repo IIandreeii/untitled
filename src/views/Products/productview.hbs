@@ -1,0 +1,45 @@
+<style>
+    footer{
+        position: fixed;
+    }
+</style>
+<div class="container">
+    <div id="view-container" class="row row-cols-1 row-cols-md-2">
+        {{#each productos}}
+        <div class="col">
+            <div class="card d-flex align-items-center">
+                <img class="img-fluid" src={{img}} alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="product-item">
+                <h4>{{Nombre}}</h4>
+                <span>{{precio}}</span>
+            </div>
+            <hr>
+            <div id="contenedor-productos">
+                <form action="/Productos/carrito" method="POST">
+                    <input type="hidden" name="product_id" value="{{id}}">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" name="cantidad" id="cantidad" value="1" min="1" max="5"  onkeydown="return false">
+                    <button type="submit">Agregar Producto al Carrito</button>
+                </form>
+            </div>
+            <hr>
+            <div>
+                <h4>Descripción</h4>
+                <p>{{descripcion}}</p>
+            </div>
+            <hr>
+            <div>
+                <h4>Contactenos</h4>
+                <div>
+                    <a href=""><i class="fa-solid fa-square-phone-flip"></i></a>
+                    <a href="https://wa.me/+51961809498?text=Estoy%20interesado%20en%20comparar%20un%20Ataud%20de%20madera%20modelo%20Venecia"><i class="fa-brands fa-square-whatsapp"></i></a>
+                </div>
+            </div>
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+</div>

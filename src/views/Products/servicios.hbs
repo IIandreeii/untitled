@@ -1,0 +1,43 @@
+<div class="container t-container">
+    <div class="row">
+        <div class="col-md-12">
+            <table id="table-productservice" class="table">
+                <thead>
+                    <div class="t-title">
+                        <h3>Servicios</h3>
+                    </div>
+                    <tr>
+                        <th scope="row">Imagen</th>
+                        <th scope="row">Nombre</th>
+                        <th scope="row">Stock</th>
+                        <th scope="row">Descripción</th>
+                        <th scope="row">Precio</th>
+                        <th scope="row">Acción</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    {{#each services}}
+                    <tr class="t-tr">
+                        <td class="table-image"> 
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid img-thumbnail" src="{{img}}">
+                        </div> 
+                        </td>
+                        <td>{{Nombre}}</td>
+                        <td>{{stock}}</td>
+                        <td class="td-limit">{{descripcion}}</td>
+                        <td>S/. {{precio}}</td>
+                        <td>
+                            <a href="/Productos/delete/{{id}}" class="btn" onclick="return confirm('¿Estás seguro de eliminar este producto?')"><i class="fa-solid fa-trash"></i> Eliminar</a>
+                            <button onclick="window.location='/Productos/edit/{{id}}'" class="btn">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                            </button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
